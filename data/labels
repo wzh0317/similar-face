@@ -20,7 +20,24 @@ huachengyu
 huge
 lixian
 chenweiting
+aoligei
+huangbo
+camillezhang
+guanxiaotong
+shiyuanlimei
+qiaobenhuannai
+liyunlong
+pengyuchang
+xinyuanjieyi
+zhangzifeng
 zhonghanliang
 wangjiaer
 yangzongwei
 zhangguorong
+
+For #1, the big challenge is to get data: https://www.google.com/search?sxsrf=ACYBGNSjn3g9UpPmGRy59lsSQv1JetJ9oA:1574460528250&q=real+people+that+look+like+anime&tbm=isch&source=univ&sa=X&ved=2ahUKEwiy3v7D6v7lAhVOKKwKHW2lBwwQ7Al6BAgFEBs&biw=1093&bih=463.  
+A way that you could make this easier data-wise to find the celebrity that looks most like somebody.  That could be done using the celebA dataset: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html.  
+
+For #2, you would need to track points through the frames of the anime if you want to morph the person to an animated sequence.  
+
+Make sure that you all contribute in coming up with the goals, research, and implementation.  It's really just the implementation that should be split up into sub-assignments.
