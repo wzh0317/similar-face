@@ -24,7 +24,7 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 ## Training more effectively
 
-- Initially we select random triplet of images from the dataset to compute the triplet loss l(a, p, n). This turned out to be a very ineffective way of training. Online triplet selection suggests that we should compute a batch of embeddings at one time, say 15 identities and 10 images per identity. From the 150 images, we can form 150 _ 9 _ 140 = 189,000 triplets to be used for training.
+- Initially we select random triplet of images from the dataset to compute the triplet loss l(a, p, n). This turned out to be a very ineffective way of training. Online triplet selection suggests that we should compute a batch of embeddings at one time, say 15 identities and 10 images per identity. From the 150 images, we can form 150 x 9 x 140 = 189,000 triplets to be used for training.
 - Another interesting improvement we made is the so called "hard negative selection". Given a batch of embeddings, we choose for each (anchor, positive) pair a random hard negative image to form a triplet. By random hard negative it means choose a negative image such that the triplet loss is positive. By this way the network is trained better and faster.
 
 ## Results
