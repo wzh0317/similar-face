@@ -11,8 +11,8 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 ## Credits
 
-Project idea came from the CS445 lecture "Understanding faces".  
-Implementation idea came from the deeplearning.ai course about face recognition (https://www.youtube.com/watch?v=-FfMVnwXrZ0)
+- Project idea came from the CS445 lecture "Understanding faces".
+- Implementation idea came from the deeplearning.ai course about face recognition (https://www.youtube.com/watch?v=-FfMVnwXrZ0)
 
 ## Difficulties encountered
 
@@ -21,6 +21,11 @@ Implementation idea came from the deeplearning.ai course about face recognition 
 - Then the problem occur, we realize the model can work on the training dataset only because the model overfitted. We sought for ways to resolve the problem.
 - As the CA/TA suggested, we decided to use the CelebA dataset instead of our custom dataset. CelebA contains a large amount of face images such that our network won't overfit easily.
 - We also realized our initial network is too simple (with too few parameters) to be expressive enough, so we decided to use the ResNet architecture.
+
+## Training more effectively
+
+- Initially we select random triplet of images from the dataset to compute the triplet loss l(a, p, n). This turned out to be a very ineffective way of training. Online triplet selection suggests that we should compute a batch of embeddings at one time, say 15 identities and 10 images per identity. From the 150 images, we can form 150 _ 9 _ 140 = 189,000 triplets to be used for training.
+- Another interesting improvement we made is the so called "hard negative selection". Given a batch of embeddings, we choose for each (anchor, positive) pair a random hard negative image to form a triplet. By random hard negative it means choose a negative image such that the triplet loss is positive. By this way the network is trained better and faster.
 
 ## Results
 
