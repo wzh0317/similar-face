@@ -16,8 +16,7 @@ conda install jupyter matplotlib seaborn scikit-learn
 - checkpoint: Our initial model parameters
 - main2.ipynb: Implemented the improvements mentioned below
 - checkpoint_online: Our improved model parameters
-- filenames_embedding_50k: 50,000 filenames with embeddings object
-- filenames_embedding_200k: 200,000 filenames with embeddings object
+- filenames_embedding: 200,000 filenames with embeddings object
 - data/: Our initial dataset used for training
 - selfies/: Save you selfies here and open Result.ipynb to find out the celebrity looks like you
 
@@ -47,8 +46,8 @@ conda install jupyter matplotlib seaborn scikit-learn
 - PCA for 20 identities and 10 images per identity  
   ![PCA for 20 identities and 10 images per identity](https://raw.githubusercontent.com/zxh3/similar-face/master/results/PCA_.png "PCA for 20 identities and 10 images per identity")
 
-- Target Face (In validation set)  
-  ![Target Face](https://raw.githubusercontent.com/zxh3/similar-face/master/results/target_face_.png "Target Face")
+- Target Face  
+  ![Target Face](https://raw.githubusercontent.com/zxh3/similar-face/master/results/target_face.png "Target Face")
 
-* 10 Most Similar Faces (In validation set)  
-  ![10 Most Similar Faces](https://raw.githubusercontent.com/zxh3/similar-face/master/results/10_most_similar_faces_.png "10 Most Similar Faces")
+* 10 Most Similar Faces  
+  ![10 Most Similar Faces](https://raw.githubusercontent.com/zxh3/similar-face/master/results/k_closest_faces.png "10 Most Similar Faces")
