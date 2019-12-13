@@ -35,6 +35,8 @@ conda install jupyter matplotlib seaborn scikit-learn
 - Then the problem occur, we realize the model can work on the training dataset only because the model overfitted. We sought for ways to resolve the problem
 - As the CA/TA suggested, we decided to use the CelebA dataset instead of our custom dataset. CelebA contains a large amount of face images such that our network won't overfit easily
 - We also realized our initial network is too simple (with too few parameters) to be expressive enough, so we decided to use the ResNet architecture
+- Network architecture and triplet loss function
+![Network architecture and triplet loss function](https://github.com/zxh3/similar-face/blob/master/results/triplet.jpg "Network architecture and triplet loss function")
 
 ## Improvements - Training more effectively
 
@@ -51,3 +53,4 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 * 10 Most Similar Faces  
   ![10 Most Similar Faces](https://raw.githubusercontent.com/zxh3/similar-face/master/results/k_closest_faces.png "10 Most Similar Faces")
+
