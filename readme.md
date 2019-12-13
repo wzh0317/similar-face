@@ -43,5 +43,3 @@ conda install jupyter matplotlib seaborn scikit-learn
 - Another interesting improvement we made is the so called "hard negative selection". Given a batch of embeddings, we choose for each (anchor, positive) pair a random hard negative image to form a triplet. By random hard negative it means choose a negative image such that the triplet loss is positive. By this way the network is trained better and faster
 
 ## Results
-
-TODO
