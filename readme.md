@@ -13,6 +13,8 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 - Project idea came from the CS445 lecture "Understanding faces".
 - Implementation idea came from the deeplearning.ai course about face recognition (https://www.youtube.com/watch?v=-FfMVnwXrZ0)
+- Improvement idea came from "Siamese and triplet learning with online pair/triplet mining"
+  (https://github.com/adambielski/siamese-triplet)
 
 ## Difficulties encountered
 
