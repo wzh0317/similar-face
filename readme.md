@@ -43,3 +43,12 @@ conda install jupyter matplotlib seaborn scikit-learn
 - Another interesting improvement we made is the so called "hard negative selection". Given a batch of embeddings, we choose for each (anchor, positive) pair a random hard negative image to form a triplet. By random hard negative it means choose a negative image such that the triplet loss is positive. By this way the network is trained better and faster
 
 ## Results
+
+- PCA for 20 identities and 10 images per identity
+  ![PCA for 20 identities and 10 images per identity](https://raw.githubusercontent.com/zxh3/similar-face/master/results/PCA.png "PCA for 20 identities and 10 images per identity")
+
+- Target Face (In validation set)
+  ![Target Face](https://raw.githubusercontent.com/zxh3/similar-face/master/results/target_face.png "Target Face")
+
+* 10 Most Similar Faces (In validation set)
+  ![10 Most Similar Faces](https://raw.githubusercontent.com/zxh3/similar-face/master/results/10_most_similar_faces.png "10 Most Similar Faces")
