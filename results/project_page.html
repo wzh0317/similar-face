@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+	<style>
+    body {
+      margin: 20px;
+      font-size: 20px;
+      font-family: 'Gupter', serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-height: 500px;
+      max-width: 800px;
+    }
+
+	</style>
+
+	<body>
+    <h1>CS445 Final Project: You Look Like A Star! </h1> 
+    <a href="https://github.com/zxh3/similar-face">Github</a>
+    <h4>Team member:  </h4>
+      <p>Xiaohua Zhang (xz2), Camille Zhang (lanxinz2), Panqiu Tang (panqiut2) </p>
+    <h3>Introduction:  </h3>
+    <p>
+      Our project finds the celebrity that looks like someone using face recognition algorithm. Our project idea comes from the CS445 lecture "Understanding faces". 
+      We followed a course from <a href="https://www.youtube.com/watch?v=-FfMVnwXrZ0&t=1s">deeplearning.ai</a>  that taught us how to implement Siamese network and the triplet loss function to accopmplish face recognition task.  
+      We started with building a simple 3 layer CNN (Convolutional Neural Network) and a custom dataset with 22 identities and 10 images per identity. The training loss converge to very low value quickly and we were able to retrieve the similar faces given a specified training example.
+      However, we realized that the model worked well on the training dataset only because the model overfitted. Then, we changed our dataset to the <a href="http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html">CelebA dataset</a> as the instructor suggested in our project proposal feedback.
+      CelebA contains a large amount (about 220,000) of face images of celebrities so that our network won't overfit easily. 
+      In addition, we changed our initial neural network, which only has a few parameters and is too simple to be expressive enough, to ResNet architecture. 
+    </p>
+    <p>
+      <div class="container"><img src="triplet.jpg"><p>Network architecture and triplet loss function</p></div>      
+    </p>
+		<h3>Improvements to train more effectively: </h3>
+    <p> 
+      Initially we select random triplet of images from the dataset to compute the triplet loss l(a, p, n). This turned out to be a very ineffective way of training. 
+      <a href="https://github.com/adambielski/siamese-triplet">Online triplet selection</a> suggests that we should compute a batch of embeddings at one time, say 15 identities and 10 images per identity. 
+      From the 150 images, we can form 150 x 9 x 140 = 189,000 triplets to be used for training. </br>
+
+      Another interesting improvement we made is the so called "hard negative selection". 
+      Given a batch of embeddings, we choose for each (anchor, positive) pair a random hard negative image to form a triplet. 
+      By random hard negative it means choose a negative image such that the triplet loss is positive. By this way the network is trained better and faster.
+      Say we have 15 identities and 10 images per identity again. Before, we would have 189,000 triplets to be used for training. After using hard negative selection,
+      we only have 150 x 9 = 1,350 triplets for training, because we'll randomly selected the "n". 
+    </p>
+    <h3>Results: </h3>
+      <p>
+        <div class="container">
+          <img src="https://raw.githubusercontent.com/zxh3/similar-face/master/results/PCA_.png">
+          <p>PCA for 20 identities and 10 images per identity</p>
+        </div>
+      </p>
+      <p>
+        <div class="container">
+          <img src="https://raw.githubusercontent.com/zxh3/similar-face/master/results/target_face.png">
+          <p>Target Face</p>
+        </div>        
+      </p>
+      <p>
+        <div class="container">
+          <img src="https://raw.githubusercontent.com/zxh3/similar-face/master/results/k_closest_faces.png">
+          <p>10 Most Similar Faces</p>
+        </div>        
+      </p>
+	</body>
+</html>
