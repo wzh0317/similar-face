@@ -13,7 +13,9 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 - Result.ipynb: Show the final result
 - main.ipynb: Our initial network trained with random triplet selection
+- checkpoint: Our initial model parameters
 - main2.ipynb: Implemented the improvements mentioned below
+- checkpoint_online: Our improved model parameters
 - filenames_embedding_50k: 50,000 filenames with embeddings object
 - filenames_embedding_200k: 200,000 filenames with embeddings object
 - data/: Our initial dataset used for training
