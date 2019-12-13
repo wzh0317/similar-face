@@ -44,11 +44,11 @@ conda install jupyter matplotlib seaborn scikit-learn
 
 ## Results
 
-- PCA for 20 identities and 10 images per identity
+- PCA for 20 identities and 10 images per identity  
   ![PCA for 20 identities and 10 images per identity](https://raw.githubusercontent.com/zxh3/similar-face/master/results/PCA.png "PCA for 20 identities and 10 images per identity")
 
-- Target Face (In validation set)
+- Target Face (In validation set)  
   ![Target Face](https://raw.githubusercontent.com/zxh3/similar-face/master/results/target_face_.png "Target Face")
 
-* 10 Most Similar Faces (In validation set)
+* 10 Most Similar Faces (In validation set)  
   ![10 Most Similar Faces](https://raw.githubusercontent.com/zxh3/similar-face/master/results/10_most_similar_faces_.png "10 Most Similar Faces")
