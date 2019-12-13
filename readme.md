@@ -16,8 +16,7 @@ conda install jupyter matplotlib seaborn scikit-learn
 - checkpoint: Our initial model parameters
 - main2.ipynb: Implemented the improvements mentioned below
 - checkpoint_online: Our improved model parameters
-- filenames_embedding_50k: 50,000 filenames with embeddings object
-- filenames_embedding_200k: 200,000 filenames with embeddings object
+- filenames_embedding: 200,000 filenames with embeddings object
 - data/: Our initial dataset used for training
 - selfies/: Save you selfies here and open Result.ipynb to find out the celebrity looks like you
 
