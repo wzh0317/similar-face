@@ -34,6 +34,11 @@
       CelebA contains a large amount (about 220,000) of face images of celebrities so that our network won't overfit easily. 
       In addition, we changed our initial neural network, which only has a few parameters and is too simple to be expressive enough, to ResNet architecture. 
     </p>
+    <p>The picture below is a simple illustration of the triplet loss function that we used to train the neural network. A is an anchor input, P is a positive input 
+      of the same class as A (photo of the same person), and N is a negative input of a different class from A (photo of another person). By minimizing the loss function, 
+      we can make the disimilarity (Euclidean distance) between A and P (photos of the same person) be less than the disimilarity between A and N (photos of different person), 
+      which is the goal of our face recognition algorithm. 
+    </p>
     <p>
       <div class="container"><img src="./results/triplet.jpg"><p>Network architecture and triplet loss function</p></div>      
     </p>
